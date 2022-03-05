@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-11/12 mx-auto">
+    <header>
+      <h1
+        class="font-bold text-emerald-900 mt-10 mb-2 text-5xl text-center items-center justify-items-center"
+      >
+        Expense Tracker
+      </h1>
+      <h5 class="font-semibold text-sm mb-5 text-center">
+        (A place to keep track of all your expenses)
+      </h5>
+    </header>
+    <main>
+      <section class="mb-16">
+        <div
+          class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-7 text-center items-center justify-items-center"
+        >
+          <div>
+            <img class="" src="./images/planning.jpg" alt="" />
+          </div>
+          <div class="bg-cyan-50 text-slate-900 p-5 rounded w-3/4">
+            <!-- income and expense section -->
+
+            <h1 class="m-3 text-xl font-bold">Income</h1>
+            <div class="grid grid-cols-4 gap-2">
+              <!--  income input section -->
+
+              <p class="font-semibold text-center mx-3">Income:</p>
+              <input
+                id="income-input"
+                class="p-2 mr-3 w-3/4 col-span-3 text-center bg-gray-200 focus:outline-none focus:ring focus:border-blue-500 rounded"
+                placeholder="your income"
+                type="text"
+                name="input"
+              />
+            </div>
+
+            <!-- Expenses section -->
+
+            <h1 class="m-3 text-xl font-bold">Expenses</h1>
+            <div class="grid grid-rows-3 gap-3">
+              <!-- expense input section -->
+
+              <div class="grid grid-cols-4 gap-2">
+                <p class="font-semibold text-center px-4">Food:</p>
+                <input
+                  id="food-input"
+                  class="p-2 mr-3 w-3/4 col-span-3 text-center bg-gray-200 focus:outline-none focus:ring focus:border-blue-500 rounded"
+                  type="text"
+                  name="input"
+                />
+              </div>
+              <div class="grid grid-cols-4 gap-2">
+                <p class="font-semibold text-center px-4">Rent:</p>
+                <input
+                  id="rent-input"
+                  class="p-2 mr-3 w-3/4 col-span-3 text-center bg-gray-200 focus:outline-none focus:ring focus:border-blue-500 rounded"
+                  type="text"
+                  name="input"
+                />
+              </div>
+              <div class="grid grid-cols-4 gap-2">
+                <p class="font-semibold text-center px-4">Clothes:</p>
+                <input
+                  id="clothes-input"
+                  class="p-2 mr-3 w-3/4 col-span-3 text-center bg-gray-200 focus:outline-none focus:ring focus:border-blue-500 rounded"
+                  type="text"
+                  name="input"
+                />
+              </div>
+            </div>
+
+            <!-- calculate button -->
+
+            <button
+              id="calculate-btn"
+              class="px-5 py-2 mb-3 mt-7 col-span-2 bg-green-900 text-white rounded"
+            >
+              Calculate
+            </button>
+
+            <!-- total expenses section -->
+
+            <h1 class="mb-4 text-xl font-bold">
+              Total Expenses: <span id="total-expense"></span>
+            </h1>
+
+            <!-- balance section -->
+
+            <h1 class="mb-5 text-xl font-bold">
+              Balance: <span id="total-balance"></span>
+            </h1>
+
+            <!--  saving section -->
+
+            <div class="grid grid-cols-6">
+              <p class="font-bold text-center align-center">Save:</p>
+              <input
+                id="save-input"
+                class="p-2 ml-5 w-3/4 col-span-2 text-center bg-gray-200 focus:outline-none focus:ring focus:border-blue-500 rounded"
+                type="text"
+                name="input"
+              />
+              <p class="font-bold text-center align-center w-1/2">%</p>
+              <button
+                id="save-btn"
+                class="w-3/4 col-span-2 bg-green-900 text-white rounded"
+              >
+                Save
+              </button>
+            </div>
+            <!--  saving amount -->
+
+            <h1 class="m-3 text-xl font-bold">
+              Saving Amount: <span id="saved-money"></span>
+            </h1>
+
+            <!-- remaining amount  -->
+
+            <h1 class="m-3 text-xl font-bold">
+              Remaining Balance: <span id="remaining-money"></span>
+            </h1>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js  -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
